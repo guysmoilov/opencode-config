@@ -9,5 +9,13 @@
       ],
       "enabled": true
     }
+  },
+  "permission": {
+    "edit": "allow",
+    "bash": "ask",
+    "skill": "allow",
+    "webfetch": "ask",
+    "doom_loop": "ask",
+    "external_directory": "ask"
   }
 }
