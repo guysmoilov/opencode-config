@@ -17,5 +17,6 @@
     "webfetch": "ask",
     "doom_loop": "ask",
     "external_directory": "ask"
-  }
+  },
+  "plugin": ["opencode-openai-codex-auth@4.2.0"]
 }
