@@ -22,7 +22,7 @@ To correctly identify unresolved issues, you should:
                   author { login }
                   reactionGroups {
                     content
-                    users { totalCount }
+                    viewerHasReacted
                   }
                 }
               }
@@ -32,7 +32,7 @@ To correctly identify unresolved issues, you should:
       }
     }' --jq '.data.repository.pullRequest.reviewThreads.nodes[] | select(.isResolved == false)'
     ```
-3. For unresolved threads, extract the discussion history, focusing on the latest concerns and any reactions (e.g., 👍, 👀).
+3. For unresolved threads, extract the discussion history, focusing on the latest concerns and any reactions from the current user (e.g., 👍). Use `viewerHasReacted` to filter for your own reactions.
 
-Provide a concise summary categorized by topic (e.g., Security, Architecture, Naming). For each point, mention which user(s) raised the concern and note any significant reactions (especially Thumbs Up 👍) to provide context for follow-up. Exclude any comments that have already been marked as resolved.
+Provide a concise summary categorized by topic (e.g., Security, Architecture, Naming). For each point, mention which user(s) raised the concern and note if you (the current viewer) have reacted (e.g., with a Thumbs Up 👍) to indicate agreement or acknowledgement. Exclude any comments that have already been marked as resolved.
 
