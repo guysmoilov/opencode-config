@@ -1,21 +1,8 @@
 ---
 description: >-
-  Use this agent when you need to perform quality assurance testing on web
-  pages, including functional testing, visual regression testing, accessibility
-  checks, and performance validation. Examples: <example>Context: User has just
-  deployed a new feature and wants to ensure it works correctly across different
-  browsers. user: 'I need to test the new checkout flow on our e-commerce site'
-  assistant: 'I'll use the web-qa-automation agent to run comprehensive QA tests
-  on your checkout flow using Playwright' <commentary>Since the user needs web
-  page QA testing, use the web-qa-automation agent to perform automated testing
-  with Playwright.</commentary></example> <example>Context: User wants to verify
-  their responsive design works properly on different viewport sizes. user: 'Can
-  you test if our landing page looks good on mobile and desktop?' assistant:
-  'Let me use the web-qa-automation agent to test your landing page across
-  different viewports and devices' <commentary>The user needs responsive design
-  testing, which is a perfect use case for the web-qa-automation
-  agent.</commentary></example>
-mode: all
+  Performs QA testing on web pages using Playwright, including functional
+  testing, visual regression, accessibility checks, and performance validation.
+mode: subagent
 tools:
   bash: false
   write: false
