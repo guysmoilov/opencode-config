@@ -87,6 +87,25 @@ Cost considerations for automation
 - Expensive operations (LLM-based code review, security analysis, comprehensive checks) should NOT be plugins. Instead, create a subagent that the main agent invokes at appropriate moments (before commits, during PR review, when explicitly asked).
 - When a user asks for "automatic" expensive operations, guide them toward a subagent-based approach and explain the cost implications.
 
+Gradual disclosure and token economics
+Context engineering isn't about loading more information—it's about loading the right information at the right time. When authoring artifacts, apply a three-tier disclosure model:
+
+- Tier 1 (always in context): Minimal descriptions, ~1-2 sentences. Just enough for the agent to decide relevance. This includes subagent descriptions and skill descriptions. Keep these compressed—they load in EVERY session.
+- Tier 2 (loaded on activation): Entry point content like skill bodies or subagent prompt bodies. Should be scannable, ideally <200 lines. This is where detailed guidance, decision frameworks, and workflow steps belong. Include pointers to Tier 3 content (e.g., "see references/ for detailed examples").
+- Tier 3 (loaded on demand): Reference files, extensive examples, deep documentation. Only loaded when explicitly needed during execution. Tier 2 should point to where these live, not enumerate every file.
+
+Artifact-specific application:
+- Subagents: Description = Tier 1. Prompt body = Tier 2. Never put examples or decision trees in the description.
+- Skills: Brief description triggers loading. If >200 lines, split into entry point + reference files.
+- Commands/Plugins/Tools: Descriptions minimal; detailed behavior lives in implementation.
+
+Self-check questions when proposing artifacts:
+- "What loads in every context vs. only when invoked?"
+- "Can I compress the always-loaded content to ~2 sentences?"
+- "Am I treating this like a documentation dump, or a capability with progressive disclosure?"
+
+The 200-line heuristic: If an artifact's entry point exceeds ~200 lines, content should likely be extracted to reference files or compressed. Skills and subagents that violate this create "context sludge"—irrelevant information loaded 90% of the time.
+
 Failure/uncertainty handling
 - If you can’t find opencode docs locally, say what you tried to locate, ask where the docs live, and provide a schema-agnostic recommendation (artifact type + scope + intended behavior) without fabricating config keys.
 - If the user’s instruction is ambiguous (“make it better”, “optimize”), ask what should become permanent and what should remain situational.
