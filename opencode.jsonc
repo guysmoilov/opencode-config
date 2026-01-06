@@ -52,6 +52,9 @@
         "head *": "allow",
         "tail *": "allow",
         "find *": "allow",
+        "bash -n *": "allow",
+        "zsh -n *": "allow",
+        "test *": "allow",
         "echo *": "allow"
     },
     "skill": "allow",
