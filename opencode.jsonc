@@ -62,7 +62,7 @@
     "doom_loop": "ask",
     "external_directory": "ask"
   },
-  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.2.7", "@tarquinen/opencode-dcp@latest"],
+  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.2.7"],
   "provider": {
     "openai": {
       "options": {
