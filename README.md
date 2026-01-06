@@ -11,8 +11,8 @@ You must have [`antigravity`](https://antigravity.google/) installed for the Goo
 Run the following commands to authenticate the two core authentication plugins:
 
 ```bash
-opencode auth openai-codex # Requires an OpenAI ChatGPT subscription
-opencode auth antigravity
+opencode auth login # -> Choose OpenAI (OAuth) - Requires an OpenAI ChatGPT subscription
+opencode auth login # -> Choose Google Antigravity (OAuth) - Requires an Antigravity account
 ```
 
 ## Features
