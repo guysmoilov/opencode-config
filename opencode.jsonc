@@ -81,7 +81,7 @@
     "doom_loop": "ask",
     "external_directory": "ask"
   },
-  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.5.2"],
+  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.5.2", "@mohak34/opencode-notifier@v0.1.26"],
   "provider": {
     "openai": {
       "options": {
