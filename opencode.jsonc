@@ -8,6 +8,11 @@
         "@playwright/mcp@latest"
       ],
       "enabled": true
+    },
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": true
     }
   },
   "permission": {
@@ -56,14 +61,27 @@
         "bash -n *": "allow",
         "zsh -n *": "allow",
         "test *": "allow",
-        "echo *": "allow"
+        "echo *": "allow",
+        "gh auth status *": "allow",
+        "gh pr list *": "allow",
+        "gh pr view *": "allow",
+        "gh pr status *": "allow",
+        "gh pr diff *": "allow",
+        "gh pr checks *": "allow",
+        "gh issue list *": "allow",
+        "gh issue view *": "allow",
+        "gh repo view *": "allow",
+        "gh run list *": "allow",
+        "gh run view *": "allow",
+        "gh search prs *": "allow",
+        "gh search issues *": "allow"
     },
     "skill": "allow",
     "webfetch": "ask",
     "doom_loop": "ask",
     "external_directory": "ask"
   },
-  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.4.3"],
+  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.5.2"],
   "provider": {
     "openai": {
       "options": {
