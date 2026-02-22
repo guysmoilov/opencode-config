@@ -1,0 +1,18 @@
+{
+  "events": {
+    "permission": {
+      "sound": true
+    },
+    "complete": {
+      "sound": true
+    },
+    "question": {
+      "sound": true
+    }
+  },
+  "sounds": {
+    "permission": "/Users/tolstoyevsky/Music/effects/PeonWhat4.wav",
+    "complete": "/Users/tolstoyevsky/Music/effects/PeonWhat4.wav",
+    "question": "/Users/tolstoyevsky/Music/effects/KnightWhat3.wav"
+  }
+}
