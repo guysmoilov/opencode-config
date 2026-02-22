@@ -50,6 +50,18 @@
         "stat *": "allow",
         "file *": "allow",
         "npm test *": "allow",
+        "npm ls *": "allow",
+        "npm view *": "allow",
+        "npm outdated *": "allow",
+        "npm explain *": "allow",
+        "npm query *": "allow",
+        "npm prefix *": "allow",
+        "npm root *": "allow",
+        "npm pkg get *": "allow",
+        "npm config get *": "allow",
+        "npm config list *": "allow",
+        "npm whoami *": "allow",
+        "npm audit *": "allow",
         "pytest *": "allow",
         "cargo test *": "allow",
         "which *": "allow",
@@ -74,14 +86,18 @@
         "gh run list *": "allow",
         "gh run view *": "allow",
         "gh search prs *": "allow",
-        "gh search issues *": "allow"
+        "gh search issues *": "allow",
+        "true": "allow",
+        "true *": "allow",
+        "false": "allow",
+        "false *": "allow"
     },
     "skill": "allow",
     "webfetch": "ask",
     "doom_loop": "ask",
     "external_directory": "ask"
   },
-  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.5.2", "@mohak34/opencode-notifier@v0.1.26"],
+  "plugin": ["opencode-openai-codex-auth@4.2.0", "opencode-antigravity-auth@1.6.0", "@mohak34/opencode-notifier@v0.1.26"],
   "provider": {
     "openai": {
       "options": {
